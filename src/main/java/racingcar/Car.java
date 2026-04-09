@@ -2,8 +2,8 @@ package racingcar;
 
 public class Car {
 
-    private final String name;
-    private final int location;
+    private String name;
+    private int location;
 
     public Car(String name) {
         validateNameLength(name);
