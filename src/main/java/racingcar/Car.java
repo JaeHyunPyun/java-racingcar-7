@@ -1,5 +1,7 @@
 package racingcar;
 
+import racingcar.policy.MovingPolicy;
+
 public class Car {
 
     private String name;
@@ -13,6 +15,16 @@ public class Car {
 
     public String getName(){
         return name;
+    }
+
+    public void move(MovingPolicy movingPolicy){
+        if(movingPolicy.isMovable()){
+            location++;
+        }
+    }
+
+    public int getLocation(){
+        return location;
     }
 
     private void validateNameLength(String name){
