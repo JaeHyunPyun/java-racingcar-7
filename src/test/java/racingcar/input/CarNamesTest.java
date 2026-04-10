@@ -1,5 +1,9 @@
 package racingcar.input;
 
+import static racingcar.constant.ExceptionMessage.DUPLICATE_EXCEPTION_MESSAGE;
+import static racingcar.constant.ExceptionMessage.INVALID_NAME_FORMAT_EXCEPTION_MESSAGE;
+import static racingcar.constant.ExceptionMessage.OVER_NAME_LENGTH_EXCEPTION_MESSAGE;
+
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -41,7 +45,7 @@ public class CarNamesTest {
         //when, then
         Assertions.assertThatThrownBy(() -> CarNames.from(input))
             .isInstanceOf(IllegalArgumentException.class)
-            .hasMessage("잘못된 이름이 포함되어 있습니다.");
+            .hasMessage(INVALID_NAME_FORMAT_EXCEPTION_MESSAGE);
     }
 
     @Test
@@ -53,7 +57,7 @@ public class CarNamesTest {
         //when, then
         Assertions.assertThatThrownBy(() -> CarNames.from(input))
             .isInstanceOf(IllegalArgumentException.class)
-            .hasMessage("잘못된 이름이 포함되어 있습니다.");
+            .hasMessage(INVALID_NAME_FORMAT_EXCEPTION_MESSAGE);
     }
 
     @Test
@@ -91,7 +95,7 @@ public class CarNamesTest {
         //when, then
         Assertions.assertThatThrownBy(() -> CarNames.from(input))
             .isInstanceOf(IllegalArgumentException.class)
-            .hasMessage("잘못된 이름이 포함되어 있습니다.");
+            .hasMessage(INVALID_NAME_FORMAT_EXCEPTION_MESSAGE);
     }
 
     @Test
@@ -103,7 +107,7 @@ public class CarNamesTest {
         //when, then
         Assertions.assertThatThrownBy(() -> CarNames.from(input))
             .isInstanceOf(IllegalArgumentException.class)
-            .hasMessage("잘못된 이름이 포함되어 있습니다.");
+            .hasMessage(INVALID_NAME_FORMAT_EXCEPTION_MESSAGE);
     }
 
     @Test
@@ -115,7 +119,7 @@ public class CarNamesTest {
         //when, then
         Assertions.assertThatThrownBy(() -> CarNames.from(input))
             .isInstanceOf(IllegalArgumentException.class)
-            .hasMessage("중복된 이름이 포함되어 있습니다.");
+            .hasMessage(DUPLICATE_EXCEPTION_MESSAGE);
     }
 
     @Test
@@ -127,7 +131,7 @@ public class CarNamesTest {
         //when, then
         Assertions.assertThatThrownBy(() -> CarNames.from(input))
             .isInstanceOf(IllegalArgumentException.class)
-            .hasMessage("자동차 이름은 5자 이하여야합니다.");
+            .hasMessage(OVER_NAME_LENGTH_EXCEPTION_MESSAGE);
     }
 
 

@@ -30,23 +30,23 @@ public record CarNames(
 
     private static void validateNameFormat(String name){
         if (name.isEmpty()) {
-            throw new IllegalArgumentException("잘못된 이름이 포함되어 있습니다.");
+            throw new IllegalArgumentException(INVALID_NAME_FORMAT_EXCEPTION_MESSAGE);
         }
 
         if (name.length() > MAX_NAME_LENGTH) {
-            throw new IllegalArgumentException("자동차 이름은 5자 이하여야합니다.");
+            throw new IllegalArgumentException(OVER_NAME_LENGTH_EXCEPTION_MESSAGE);
         }
     }
 
     private static void validateBlankInput(List<String> parsedNames) {
         if (parsedNames.isEmpty()) {
-            throw new IllegalArgumentException("잘못된 이름이 포함되어 있습니다.");
+            throw new IllegalArgumentException(INVALID_NAME_FORMAT_EXCEPTION_MESSAGE);
         }
     }
 
     private static void validateDuplicateNames(List<String> parsedNames) {
         if (new HashSet<>(parsedNames).size() != parsedNames.size()) {
-            throw new IllegalArgumentException("중복된 이름이 포함되어 있습니다.");
+            throw new IllegalArgumentException(DUPLICATE_EXCEPTION_MESSAGE);
         }
     }
 
