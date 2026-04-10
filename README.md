@@ -53,8 +53,8 @@ jun : ----- </br></br>
 
 
 # 기능 목록
-1. 게임 진행자(Game Controller)
-    - [ ] 게임시작
+1. 게임 진행자(Race Controller)
+    - [x] 게임진행
 2. 입력기(InputView)
     - [x] 자동차 이름(n개) 및 게임 횟수(k회) 입력 받기
     - [x] 쉽표 기준 이름 분리
