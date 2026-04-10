@@ -27,6 +27,10 @@ public class Car {
         return location;
     }
 
+    public int compareLocation(Car other){
+        return Integer.compare(this.location, other.getLocation());
+    }
+
     private void validateNameLength(String name){
         if(name.length() > 5){
             throw new IllegalArgumentException("자동차 이름은 5자 이하여야 합니다.");
